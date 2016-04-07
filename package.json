@@ -1,13 +1,12 @@
 {
   "name": "ikimail",
-  "version": "2.0",
-  "description": "Create and email an Ikigai",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server.js"
-  },
+  
   "dependencies": {
     "express": "4.13.3",
     "nodemailer": "*"
+  },
+
+  "engines": {
+    "node": "5.1.1"
   }
 }
