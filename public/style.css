@@ -1,0 +1,30 @@
+.body {
+	display:flex;
+	align-items: center;
+    justify-content: center;
+}
+#container {
+	display:flex;
+	flex-direction:column;
+	width:50%;
+}
+
+.email {
+	margin:10px;
+}
+
+.subject {
+	margin:10px;
+}
+
+.message {
+	margin:10px;
+}
+
+button {
+	width:50%;
+	background-color: #add8e6;
+	border:1px solid gray;
+	margin: 0px auto;
+}
+
