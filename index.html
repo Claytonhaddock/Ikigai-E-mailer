@@ -9,7 +9,7 @@
 	<script src="script.js"></script>
 </head>
 <body>
-	<div class="container">
+	<div class="container" style="background-color: tomato">
 	  <div class="title"><h1>Eeky-Guide</h1></div>
 	  <canvas id="canvas" width="500" height="400"></canvas>
 	  <input class="love" placeholder="What you love"></input>
@@ -20,18 +20,7 @@
 	 	<a id="download"><div>Email</div></a>
 	 	<div id="message"></div>
 	</div>
-<!--
-<div class="body">
-	<div id="container">
-		<h1>Feel free to send an email, but it's mailing from my account so nothing crazy. Please</h1>
-		<input class="email" id="to" type="text" placeholder="Enter recipient" />
-		<input class="subject" id="subject" type="text" placeholder="Enter Subject" />
-		<textarea class="message" id="content" cols="40" rows="5" placeholder="Enter your message"></textarea>
-		<button id="send_email">Send Email</button>
-		<span id="message"></span>
-	</div>
-</div>
--->
+
 	<script>
 	$(document).ready(function(){
 	    var from,to,subject,text;
