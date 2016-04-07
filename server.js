@@ -46,16 +46,8 @@ app.get('/send',function(req,res){
 
 
 
-app.listen(3000,function(){
-    console.log("Express Started on Port 3000");
+app.listen(process.env.PORT || 5000, function(){
+    console.log("Express Started on Port:" + process.env.PORT);
 });
 
 
-
-var mailOptions = {
-    from: '"Fred Foo 👥" <foo@blurdybloop.com>', // sender address
-    to: 'bar@blurdybloop.com, baz@blurdybloop.com', // list of receivers
-    subject: 'Hello ✔', // Subject line
-    text: 'Hello world 🐴', // plaintext body
-    html: '<b>Hello world 🐴</b>' // html body
-};
