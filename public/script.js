@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
             to=$("#to").val();
             subject="Your Eeky-Guide";
             $("#message").text("Sending E-mail...Please wait");
-            $.get("http://localhost:3000/send",{to:to,subject:subject,picture:picture},function(data){
+            $.get("https://myapp-name-here.herokuapp.com/send",{to:to,subject:subject,picture:picture},function(data){
             if(data=="sent")
     	        {
     	            $("#message").empty().html("Email sent to "+to);
