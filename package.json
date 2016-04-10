@@ -3,7 +3,8 @@
   
   "dependencies": {
     "express": "4.13.3",
-    "nodemailer": "*"
+    "nodemailer": "*",
+    "body-parser": "*"
   },
 
   "engines": {
