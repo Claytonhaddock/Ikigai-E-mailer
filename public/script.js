@@ -8,7 +8,7 @@ window.addEventListener('load', function() {
 	var picture = canvas.toDataURL();
     downloadCanvas(this, 'canvas', 'Eekyguide.png');
 
-      /*  var from,to,subject;
+        var from,to,subject;
 
             to=$("#to").val();
             subject="Your Eeky-Guide";
@@ -18,8 +18,8 @@ window.addEventListener('load', function() {
     	        {
     	            $("#message").empty().html("Email sent to "+to);
     	        }
-    		}); */
-
+    		}); 
+/*
 	var data = {};
 					data.title = $("#to").val();
 					data.message = "Your Eeky-Guide";
@@ -36,7 +36,7 @@ window.addEventListener('load', function() {
                             console.log(JSON.stringify(data));
                         }
                     });
-
+*/
 
 
 	});	
