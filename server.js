@@ -1,17 +1,9 @@
 var express=require('express');
 var nodemailer = require("nodemailer");
 var bodyParser = require('body-parser');
-var cors = require('cors');
+    cors = require('cors');
 var app=express();
 app.use( bodyParser.json() );
-app.use(cors());
-
-
-
-
-
-
-
 
 
 
@@ -22,7 +14,7 @@ app.use(express.static('public'));
 app.get('/',function(req,res){
     res.sendfile('index.html');
 });
-app.post('/send',function(req,res){
+app.post('/send', cors(),function(req,res){
 
     var mailOptions={
         to : req.body.title,
