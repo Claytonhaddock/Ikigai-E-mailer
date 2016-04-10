@@ -21,7 +21,7 @@ window.addEventListener('load', function() {
     		}); */
 
 var data = {};
-					data.title = ("#to").val();
+					data.title = $("#to").val();
 					data.message = "Your Eeky-Guide";
 					data.picture = picture;
 					
