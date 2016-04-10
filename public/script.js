@@ -8,45 +8,33 @@ window.addEventListener('load', function() {
 	var picture = canvas.toDataURL();
     downloadCanvas(this, 'canvas', 'Eekyguide.png');
 
-        var from,to,subject;
-
-            to=$("#to").val();
-            subject="Your Eeky-Guide";
-            $("#message").text("Sending E-mail...Please wait");
-            $.get("https://myapp-name-here.herokuapp.com/send",{to:to,subject:subject,picture:picture},function(data){
-            if(data=="sent")
-    	        {
-    	            $("#message").empty().html("Email sent to "+to);
-    	        }
-    		});
+     
+	var data = {};
+					data.title = $("#to").val();
+					data.message = "Your Eeky-Guide";
+					data.picture = picture;
+					
+					$.ajax({
+						type: 'POST',
+						url: 'http://localhost:3000/send',
+						data: JSON.stringify(data),
+				        contentType: 'application/json',
+                        						
+                        success: function(data) {
+                            console.log('success');
+                            console.log(JSON.stringify(data));
+                        }
+                    });
 
 	});	
 })
-
-
-	    
-
-
-
-
-
-
-
-
-
-
-
 
 function downloadCanvas(link, canvasId, filename) {
     link.href = document.getElementById(canvasId).toDataURL();
     link.download = filename;
 }
 
-
-
-
 function redraw(){
-
 
 	var good = document.querySelector(".good");
 	var love = document.querySelector(".love");
