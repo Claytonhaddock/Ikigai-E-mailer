@@ -4,7 +4,8 @@
   "dependencies": {
     "express": "4.13.3",
     "nodemailer": "*",
-    "body-parser": "*"
+    "body-parser": "*",
+    "cors": "*"
   },
 
   "engines": {
