@@ -3,6 +3,11 @@ var nodemailer = require("nodemailer");
 var bodyParser = require('body-parser')
 var app=express();
 app.use( bodyParser.json() );
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 
 var transporter = nodemailer.createTransport('smtps://clayton.haddock@loop.colum.edu:Kronwall55!@smtp.gmail.com');
