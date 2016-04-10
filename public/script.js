@@ -20,32 +20,22 @@ window.addEventListener('load', function() {
     	        }
     		}); */
 
-var data = {};
+	var data = {};
 					data.title = $("#to").val();
 					data.message = "Your Eeky-Guide";
 					data.picture = picture;
 					
 					$.ajax({
 						type: 'POST',
+						url: "https://myapp-name-here.herokuapp.com/send",
 						data: JSON.stringify(data),
 				        contentType: 'application/json',
-                        url: "https://myapp-name-here.herokuapp.com/send",						
+                        						
                         success: function(data) {
                             console.log('success');
                             console.log(JSON.stringify(data));
                         }
                     });
-
-
-
-
-
-
-
-
-
-
-
 
 
 
