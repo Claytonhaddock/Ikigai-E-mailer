@@ -14,6 +14,8 @@ app.use(express.static('public'));
 app.get('/',function(req,res){
     res.sendfile('index.html');
 });
+
+app.options('/send', cors());
 app.post('/send', cors(),function(req,res){
 
     var mailOptions={

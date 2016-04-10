@@ -8,17 +8,6 @@ window.addEventListener('load', function() {
 	var picture = canvas.toDataURL();
     downloadCanvas(this, 'canvas', 'Eekyguide.png');
 
-       /* var from,to,subject;
-
-            to=$("#to").val();
-            subject="Your Eeky-Guide";
-            $("#message").text("Sending E-mail...Please wait");
-            $.get("https://myapp-name-here.herokuapp.com/send",{to:to,subject:subject,picture:picture},function(data){
-            if(data=="sent")
-    	        {
-    	            $("#message").empty().html("Email sent to "+to);
-    	        }
-    		}); */
 
 	var data = {};
 					data.title = $("#to").val();
@@ -27,7 +16,7 @@ window.addEventListener('load', function() {
 					
 					$.ajax({
 						type: 'POST',
-						url: "https://myapp-name-here.herokuapp.com/send",
+						url: "https://mysterious-shore-48796.herokuapp.com/send",
 						data: JSON.stringify(data),
 				        contentType: 'application/json',
                         						
