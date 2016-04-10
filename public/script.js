@@ -8,23 +8,46 @@ window.addEventListener('load', function() {
 	var picture = canvas.toDataURL();
     downloadCanvas(this, 'canvas', 'Eekyguide.png');
 
-     
-	var data = {};
-					data.title = $("#to").val();
+      /*  var from,to,subject;
+
+            to=$("#to").val();
+            subject="Your Eeky-Guide";
+            $("#message").text("Sending E-mail...Please wait");
+            $.get("https://myapp-name-here.herokuapp.com/send",{to:to,subject:subject,picture:picture},function(data){
+            if(data=="sent")
+    	        {
+    	            $("#message").empty().html("Email sent to "+to);
+    	        }
+    		}); */
+
+var data = {};
+					data.title = ("#to").val();
 					data.message = "Your Eeky-Guide";
 					data.picture = picture;
 					
 					$.ajax({
 						type: 'POST',
-						url: 'http://localhost:3000/send',
 						data: JSON.stringify(data),
 				        contentType: 'application/json',
-                        						
+                        url: "https://myapp-name-here.herokuapp.com/send",						
                         success: function(data) {
                             console.log('success');
                             console.log(JSON.stringify(data));
                         }
                     });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 	});	
 })
