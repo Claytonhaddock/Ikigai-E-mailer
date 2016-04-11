@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
 					
 					$.ajax({
 						type: 'POST',
-						url: "https://mysterious-shore-48796.herokuapp.com/send",
+						url: "https://myapp-name-here/send",
 						data: JSON.stringify(data),
 				        contentType: 'application/json',
                         						
