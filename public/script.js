@@ -6,7 +6,7 @@ window.addEventListener('load', function() {
 	redraw();
 	var canvas = document.getElementById('canvas');
 	var picture = canvas.toDataURL();
-    downloadCanvas(this, 'canvas', 'Eekyguide.png');
+    //downloadCanvas(this, 'canvas', 'Eekyguide.png');
 
 
 	var data = {};
