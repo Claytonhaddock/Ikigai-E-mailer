@@ -8,7 +8,7 @@ app.use( bodyParser.json() );
 
 
 
-var transporter = nodemailer.createTransport('smtps://clayton.haddock@loop.colum.edu:Kronwall55!@smtp.gmail.com');
+var transporter = nodemailer.createTransport('smtps://nodemailer24@gmail.com:nerdbasher24@smtp.gmail.com');
 
 app.use(express.static('public'));
 app.get('/',function(req,res){
