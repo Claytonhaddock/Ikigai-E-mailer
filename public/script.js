@@ -16,7 +16,7 @@ window.addEventListener('load', function() {
 					
 					$.ajax({
 						type: 'POST',
-						url: "https://myapp-name-here/send",
+						url: "https://limitless-beyond-40043.herokuapp.com/send",
 						data: JSON.stringify(data),
 				        contentType: 'application/json',
                         						
